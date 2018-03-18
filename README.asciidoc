@@ -1,0 +1,30 @@
+kakoune-colorscheme-bootstrap
+-----------------------------
+
+Creating or porting a color scheme to
+https://github.com/mawww/kakoune/[Kakoune] can be a tedious process,
+as it generally involves copying RGB values from one file to another,
+and converting names from one syntax to another.
+
+This repository aims at providing a starting point to users who want to
+use their favorite color scheme in Kakoune, or create a new one based on
+an already established palette (e.g. `zenburn`).
+
+How to use the files in the `themes` directory?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `themes` directory contains `.kak` files that declare faces with the
+proper colors already set for the theme they implement. The usual code token
+such as keywords, numbers, comments etc should already be handled by those
+files, as well as the background color, foreground color (for generic text)
+or line numbers.
+
+Copy the theme you're interested in, then modify it to implement the missing
+faces that are specific to Kakoune (menus, selections etc).
+
+How were the bootstrap themes generated?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `generate.py` script was used to parse all the themes provided by
+the http://www.andre-simon.de/doku/highlight/en/highlight.php[highlight]
+utility, and generate color schemes usable in Kakoune.
